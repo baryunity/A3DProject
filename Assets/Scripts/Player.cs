@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
         // Constrain vertical motion
         transform.position = new Vector3(transform.position.x,
-                                Mathf.Clamp(transform.position.y, -3.8f, 5.8f));
+                                 Mathf.Clamp(transform.position.y, -3.8f, 5.8f));
 
         // Wrap horizontal motion
         if (transform.position.x >= 11.3f)
