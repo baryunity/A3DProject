@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 3.5f;
+    [SerializeField]
+    private AudioSource explosionSound;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Y))
+        {
+            print("YYY key");
+        }
+        if (Input.GetKey(KeyCode.T))
+        {
+            print("TTT key");
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            print("PPP key");
+            playSoundEffect();
+        }
+
         CalculateMovement();
     }
 
@@ -41,5 +57,10 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11.3f, transform.position.y, 0);
         }
+    }
+
+    public void playSoundEffect()
+    {
+        explosionSound.Play();
     }
 }
