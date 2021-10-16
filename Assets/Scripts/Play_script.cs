@@ -6,7 +6,7 @@ public class Play_script : MonoBehaviour
 {
     public AudioSource explosionSound;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     void Start() { }
 
     // Update is called once per frame
